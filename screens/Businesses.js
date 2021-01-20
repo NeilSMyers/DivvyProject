@@ -4,12 +4,14 @@ import {useNavigation} from '@react-navigation/native';
 
 import data from '../data.json';
 
-const BusinessItem = ({name}) => {
+const BusinessItem = ({name, location, revenue}) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity
       style={styles.container}
-      onPress={() => navigation.navigate('BusinessProfile')}>
+      onPress={() =>
+        navigation.navigate('BusinessProfile', {name, location, revenue})
+      }>
       <Text style={styles.text}>{name}</Text>
     </TouchableOpacity>
   );
