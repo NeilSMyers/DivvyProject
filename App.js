@@ -7,16 +7,23 @@
  */
 
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+
+import Businesses from './screens/Businesses';
+import BusinessProfile from './screens/BusinessProfile';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <View>
-      <Text>Player 1 Start</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Businesses">
+        <Stack.Screen name="Businesses" component={Businesses} />
+        <Stack.Screen name="BusinessProfile" component={BusinessProfile} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default App;
