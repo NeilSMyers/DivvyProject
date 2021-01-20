@@ -1,14 +1,37 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
-const Businesses = () => {
+import data from '../data.json';
+
+const BusinessItem = ({name}) => {
+  const navigation = useNavigation();
   return (
-    <View>
-      <Text>group</Text>
-    </View>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => navigation.navigate('BusinessProfile')}>
+      <Text style={styles.text}>{name}</Text>
+    </TouchableOpacity>
   );
 };
 
-const styles = StyleSheet.create({});
+const Businesses = () => {
+  return (
+    <FlatList
+      renderItem={({item}) => <BusinessItem {...item} />}
+      data={data}
+      keyExtractor={(item) => String(item.id)}
+    />
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    margin: 10,
+  },
+  text: {
+    fontSize: 16,
+  },
+});
 
 export default Businesses;
