@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
+import {Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import data from '../data.json';
@@ -23,16 +23,23 @@ const Businesses = () => {
       renderItem={({item}) => <BusinessItem {...item} />}
       data={data}
       keyExtractor={(item) => String(item.id)}
+      style={styles.flatList}
     />
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    margin: 10,
+    marginTop: 20,
+    marginLeft: 20,
   },
   text: {
     fontSize: 16,
+    color: 'white',
+    marginLeft: 5,
+  },
+  flatList: {
+    backgroundColor: 'black',
   },
 });
 

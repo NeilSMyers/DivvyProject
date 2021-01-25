@@ -16,6 +16,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* DivvyBusinessIntelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DivvyBusinessIntelTests.m */; };
+		439060D625B8C60200F44E3A /* RCTBarGraphModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 439060D525B8C60200F44E3A /* RCTBarGraphModule.m */; };
 		4510EF95611B6666372C273E /* libPods-DivvyBusinessIntel-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AB3D0A635BB8004931F34E /* libPods-DivvyBusinessIntel-tvOS.a */; };
 		7FF02DC13C2415A340320DAB /* libPods-DivvyBusinessIntel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFD790758E8A69463D3BCD9 /* libPods-DivvyBusinessIntel.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -56,6 +57,8 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DivvyBusinessIntel/main.m; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* DivvyBusinessIntel-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DivvyBusinessIntel-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* DivvyBusinessIntel-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DivvyBusinessIntel-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		439060D425B8C58500F44E3A /* RCTBarGraphModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTBarGraphModule.h; sourceTree = "<group>"; };
+		439060D525B8C60200F44E3A /* RCTBarGraphModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTBarGraphModule.m; sourceTree = "<group>"; };
 		5DFD790758E8A69463D3BCD9 /* libPods-DivvyBusinessIntel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DivvyBusinessIntel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63BAB205583A7A3EA6984FFD /* Pods-DivvyBusinessIntel-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DivvyBusinessIntel-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-DivvyBusinessIntel-tvOSTests/Pods-DivvyBusinessIntel-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		8032DDD0707591DA50CB91B9 /* libPods-DivvyBusinessIntel-DivvyBusinessIntelTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DivvyBusinessIntel-DivvyBusinessIntelTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +135,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				439060D425B8C58500F44E3A /* RCTBarGraphModule.h */,
+				439060D525B8C60200F44E3A /* RCTBarGraphModule.m */,
 			);
 			name = DivvyBusinessIntel;
 			sourceTree = "<group>";
@@ -148,7 +153,6 @@
 				12E0DE196D6CA7014E903B4F /* Pods-DivvyBusinessIntel-tvOSTests.debug.xcconfig */,
 				63BAB205583A7A3EA6984FFD /* Pods-DivvyBusinessIntel-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -294,7 +298,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1230;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -570,6 +574,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				439060D625B8C60200F44E3A /* RCTBarGraphModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,6 +671,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = DivvyBusinessIntel;
+				SWIFT_OBJC_BRIDGING_HEADER = "DivvyBusinessIntel-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -688,6 +694,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = DivvyBusinessIntel;
+				SWIFT_OBJC_BRIDGING_HEADER = "DivvyBusinessIntel-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

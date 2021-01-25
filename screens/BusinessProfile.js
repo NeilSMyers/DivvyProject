@@ -13,20 +13,31 @@ const BusinessProfile = () => {
     navigation.setOptions({
       title: route.params?.name,
       headerBackTitleVisible: false,
+      headerTintColor: 'black',
     });
   }, []);
 
   return (
-    <View>
-      <View>
-        <Text>{address}</Text>
-        <Text>{city}</Text>
-        <Text>{country}</Text>
-      </View>
+    <View style={styles.container}>
+      <Text style={styles.text}>{address}</Text>
+      <Text style={styles.text}>{city}</Text>
+      <Text style={styles.text}>{country}</Text>
     </View>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'black',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    color: 'white',
+    fontSize: 16,
+    marginVertical: 10,
+  },
+});
 
 export default BusinessProfile;
